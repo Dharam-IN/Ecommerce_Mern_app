@@ -14,8 +14,8 @@ app.get("/", (req, res)=>{
     })
 })
 
-const PoRT = process.env.PORT
+const PORT = process.env.PORT
 
 app.listen(PoRT, ()=>{
-    console.log(`Server running on ${PoRT}`)
+    console.log(`Server running on ${PORT}`)
 })
