@@ -1,11 +1,20 @@
 import express from 'express'
 import dotenv from 'dotenv'
+import morgan from 'morgan'
+import connectDB from './config/db.js'
+
+// config env
+dotenv.config()
+
+// database config
+connectDB();
 
 // rest object
 const app = express()
 
-// config
-dotenv.config()
+// middleware
+app.use(express.json())
+app.use(morgan('dev'))
 
 // rest api
 app.get("/", (req, res)=>{
@@ -16,6 +25,6 @@ app.get("/", (req, res)=>{
 
 const PORT = process.env.PORT
 
-app.listen(PoRT, ()=>{
+app.listen(PORT, ()=>{
     console.log(`Server running on ${PORT}`)
 })
