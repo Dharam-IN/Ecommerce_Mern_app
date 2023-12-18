@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
-    fname:{
+    name:{
         required: true,
         type: String,
         trim: true
