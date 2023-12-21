@@ -4,7 +4,7 @@ import Layout from "../layout/Layout";
 const Policy = ()=>{
     return(
         <>
-            <Layout>
+            <Layout title={"Privacy Policy - Aadi Cart"}>
             <div className="row contactus align-items-center py-5">
                     <div className="col-md-6 col-12">
                         <h1 className="p-2 text-center">Privacy Policy</h1>

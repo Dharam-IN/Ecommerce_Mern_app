@@ -4,7 +4,7 @@ import Layout from "../layout/Layout";
 const About = () => {
     return (
         <>
-            <Layout>
+            <Layout title={"About - Aadi Cart"}>
                 <div className="row contactus align-items-center py-5">
                     <div className="col-md-6 ">
                         <img
