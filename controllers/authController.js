@@ -9,7 +9,7 @@ export const registerController = async(req,res)=>{
 
         // validation
         if(!name || !email || !password || !phone || !address){
-            return res.send({error: "Fill all fields"})
+            return res.send({message: "Fill all fields"})
         }
 
         // User Check exist or not
@@ -17,7 +17,7 @@ export const registerController = async(req,res)=>{
         
         if(exisitingUser){
             return res.status(200).send({
-                success: true,
+                success: false,
                 message: 'Already Register please login'
             })
         }
