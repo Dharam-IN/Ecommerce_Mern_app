@@ -12,6 +12,7 @@ const Register = () => {
     const [password, setPassword] = useState("")
     const [phone, setPhone] = useState("")
     const [address, setAddress] = useState("")
+    const [answer, setAnswer] = useState("")
     const navigate = useNavigate();
 
     const [hideshow, setHideShow] = useState(false)
@@ -20,7 +21,7 @@ const Register = () => {
         e.preventDefault();
         try {
             const res = await axios.post(`${process.env.REACT_APP_API}/api/v1/auth/register`,
-                { name, email, password, phone, address }
+                { name, email, password, phone, address, answer }
             );
 
             if (res && res.data.success) {
@@ -97,6 +98,17 @@ const Register = () => {
                                 onChange={(e) => setAddress(e.target.value)}
                                 className="form-control"
                                 id="exampleInputAddress1"
+                                required
+                            />
+                        </div>
+                        <div className="mb-3">
+                            <input
+                                type="text"
+                                value={answer}
+                                placeholder="Enter Your Favorite Sport Name"
+                                onChange={(e) => setAnswer(e.target.value)}
+                                className="form-control"
+                                id="exampleInputAnswer1"
                                 required
                             />
                         </div>
